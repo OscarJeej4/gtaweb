@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>GTA-lite 3D City - Playable on GitHub Pages</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+  body, html {
+    margin: 0; padding: 0; overflow: hidden; background: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
+  }
+  #info {
+    position: absolute; top: 10px; left: 10px; color: #ccc; font-size: 14px;
+    background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px;
+    max-width: 280px;
+  }
+  #mobileControls {
+    position: absolute; bottom: 20px; left: 20px; right: 20px; height: 140px;
+    pointer-events: none;
+  }
+  #joystick {
+    position: absolute; bottom: 20px; left: 20px; width: 120px; height: 120px;
+    border-radius: 50%; background: rgba(255,255,255,0.15);
+    pointer-events: auto;
+    touch-action: none;
+  }
+  #buttons {
+    position: absolute; bottom: 40px; right: 30px;
+    display: flex; flex-direction: column; gap: 12px;
+    pointer-events: auto;
+  }
+  .btn {
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 60px; height: 60px;
+    color: white; font-weight: bold;
+    display: flex; justify-content: center; align-items: center;
+    user-select: none;
+    touch-action: manipulation;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+  .btn:active {
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+<div id="info">
+  <p><strong>GTA-lite 3D City Demo</strong></p>
+  <p>Use WASD or virtual joystick to move.</p>
+  <p>Buttons: Enter/Exit vehicle (E), Shoot (Space)</p>
+</div>
+
+<div id="mobileControls">
+  <div id="joystick"></div>
+  <div id="buttons">
+    <div class="btn" id="btnEnter">E</div>
+    <div class="btn" id="btnShoot">&#128299;</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
