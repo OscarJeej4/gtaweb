@@ -1,0 +1,102 @@
+/* style.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to top, #1a1a1a 0%, #444 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #eee;
+}
+
+#info {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  max-width: 280px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+  line-height: 1.4;
+  user-select: none;
+  pointer-events: none;
+}
+
+#mobileControls {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 10;
+  touch-action: none;
+}
+
+#joystick {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 70%);
+  box-shadow: inset 0 0 15px rgba(255,255,255,0.1);
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active,
+.btn:focus {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+@media (min-width: 800px) {
+  /* Hide mobile controls on desktop */
+  #mobileControls {
+    display: none;
+  }
+}
